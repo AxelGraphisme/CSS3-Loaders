@@ -21,6 +21,7 @@ body{
 .section-2{ background-color: #2980b9;}
 .section-3{ background-color: #e74c3c;}
 .section-4{ background-color: #8e44ad;}
+.section-5{ background-color: #f1c40f;}
 .loader{
   width: $size;
   height: $size;
@@ -36,6 +37,7 @@ body{
 @import 'loader-double';
 @import 'loader-circles';
 @import 'loader-bars';
+@import 'loader-burst';
 
 /* Animations */
 @include keyframes(spin) {
@@ -50,4 +52,8 @@ body{
   0% { @include transform(scaleY(0)); opacity:0;}
   50% { @include transform(scaleY(1)); opacity:1;}
   100% { @include transform(scaleY(0)); opacity:0;}
+}
+@include keyframes(burst){
+    0% { opacity:1; @include position(absolute, 15px 15px 15px 15px);}
+    100% { opacity:0; @include position(absolute, 2px 2px 2px 2px);}
 }

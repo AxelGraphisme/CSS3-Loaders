@@ -1,0 +1,16 @@
+.loader-burst {
+    &:before, &:after{
+        content:'';
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        bottom: 15px;
+        right: 15px;
+        border-radius:$size;
+        border: 3px solid #FFF;
+        @include animation(burst 2s linear infinite);
+    }
+    &:after {
+        @include animation-delay(-1s);
+    }
+}
