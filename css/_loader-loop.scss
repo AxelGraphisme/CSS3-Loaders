@@ -1,0 +1,17 @@
+.loader-loop {
+    @include animation(spin 0.8s linear infinite);
+    &:before, &:after {
+        content:'';
+        position: absolute;
+        top: 20px;
+        left: 5px;
+        bottom: 20px;
+        right: 35px;
+        border-radius:$size;
+        background-color: #FFF;
+    }
+    &:after {
+        left: 35px;
+        right: 5px;
+    }
+}
